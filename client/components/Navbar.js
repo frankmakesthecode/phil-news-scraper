@@ -1,47 +1,36 @@
-import React from 'react'
-import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
-import {logout} from '../store'
+import React from 'react';
+import { connect } from 'react-redux';
+import { FaGlobeAsia } from 'react-icons/fa';
+import { FaRegNewspaper } from 'react-icons/fa';
+import { AiOutlineDoubleRight } from 'react-icons/ai';
+import rapplerIcon from '../../public/icons/rappler.png';
+import inqIcon from '../../public/icons/inquirer.png';
 
-const Navbar = ({handleClick, isLoggedIn}) => (
-  <div>
-    <h1>FS-App-Template</h1>
+const Navbar = () => {
+  return (
     <nav>
-      {isLoggedIn ? (
-        <div>
-          {/* The navbar will show these links after you log in */}
-          <Link to="/home">Home</Link>
-          <a href="#" onClick={handleClick}>
-            Logout
+      <ul className="navbar-nav">
+        <li className="logo">
+          <a href="/home" className="nav-link">
+            <FaRegNewspaper className="react-icons" />
+            <span className="link-text">pna</span>
           </a>
-        </div>
-      ) : (
-        <div>
-          {/* The navbar will show these links before you log in */}
-          <Link to="/login">Login</Link>
-          <Link to="/signup">Sign Up</Link>
-        </div>
-      )}
+        </li>
+        <li className="nav-item">
+          <a href="#" className="nav-link">
+            <img src={rapplerIcon} className="logo-icons" />
+            <span className="link-text">Rappler</span>
+          </a>
+        </li>
+        <li className="nav-item">
+          <a href="#" className="nav-link">
+            <img src={inqIcon} className="logo-icons" />
+            <span className="link-text">Inquirer</span>
+          </a>
+        </li>
+      </ul>
     </nav>
-    <hr />
-  </div>
-)
+  );
+};
 
-/**
- * CONTAINER
- */
-const mapState = state => {
-  return {
-    isLoggedIn: !!state.auth.id
-  }
-}
-
-const mapDispatch = dispatch => {
-  return {
-    handleClick() {
-      dispatch(logout())
-    }
-  }
-}
-
-export default connect(mapState, mapDispatch)(Navbar)
+export default connect(null)(Navbar);
