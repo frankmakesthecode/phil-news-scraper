@@ -223,13 +223,15 @@ nav:hover .link-text {
 }
 
 .field .input-field {
-  width: 40%;
+  width: 25%;
   margin: 1rem 1rem;
   background: var(--bg-primary);
   border: none;
   border-bottom: 0.3rem solid #adb5bd;
+  color: #adb5bd;
+  transition: 600ms ease;
 
-  font-size: 1.4rem;
+  font-size: 2rem;
 }
 
 .input-field::placeholder {
@@ -238,9 +240,9 @@ nav:hover .link-text {
 }
 
 .input-field:focus {
+  width: 40%;
   border: none;
   border-bottom: 0.3rem solid var(--color-accent);
-  color: #adb5bd;
   transition: 600ms ease;
 }
 
@@ -260,7 +262,7 @@ nav:hover .link-text {
   align-items: center;
   margin: 0 8rem;
   margin-top: 5rem;
-  min-height: 50vh;
+  min-height: 60vh;
   padding: 2rem 0;
 
   border-radius: 16px;
