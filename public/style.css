@@ -8,11 +8,13 @@
   --color-accent: #76c893;
 }
 
+html,
 body {
   color: black;
-  background-color: #adb5bd;
+  height: 100%;
   margin: 0;
   padding: 0;
+  background: #4d4f5b;
 }
 
 body::-webkit-scrollbar {
