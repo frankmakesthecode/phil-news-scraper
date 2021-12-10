@@ -52,8 +52,7 @@ nav:hover .link-text {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 8rem;
-  margin-top: 5rem;
+  margin: 2rem 8rem;
   min-height: 75vh;
   padding: 2rem 0;
 
@@ -163,6 +162,13 @@ nav:hover .link-text {
 .card-list {
   display: flex;
   flex-direction: column;
+  height: 70vh;
+  width: 70%;
+  overflow-y: scroll;
+}
+
+.card-list::-webkit-scrollbar {
+  display: none;
 }
 
 .card {
@@ -250,9 +256,41 @@ nav:hover .link-text {
   visibility: hidden;
 }
 
+.filter-search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rappler-search {
+  width: 20%;
+  margin: 1rem 1rem;
+  background: var(--bg-primary);
+  border: none;
+  border-bottom: 0.3rem solid #adb5bd;
+  color: #adb5bd;
+  transition: 600ms ease;
+
+  font-size: 1rem;
+}
+
+.rappler-search:focus {
+  width: 40%;
+  border: none;
+  border-bottom: 0.3rem solid var(--color-accent);
+  transition: 600ms ease;
+}
+
+.rappler-search::placeholder {
+  color: #adb5bd;
+  opacity: 0.6;
+}
+
 #main {
   margin-left: 5rem;
   padding: 1rem;
+  align-items: center;
 }
 
 #search-container {

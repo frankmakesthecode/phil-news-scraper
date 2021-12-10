@@ -2,12 +2,20 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { createLogger } from 'redux-logger';
 import thunkMiddleware from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
+
 import auth from './auth';
 import news from './news';
 import filteredNews from './filteredNews';
 import rappler from './rappler';
+import inquirer from './inquirer';
 
-const reducer = combineReducers({ auth, news, filteredNews, rappler });
+const reducer = combineReducers({
+  auth,
+  news,
+  filteredNews,
+  rappler,
+  inquirer,
+});
 const middleware = composeWithDevTools(
   applyMiddleware(thunkMiddleware, createLogger({ collapsed: true }))
 );

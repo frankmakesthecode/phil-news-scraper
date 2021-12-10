@@ -13,7 +13,6 @@ class Routes extends Component {
   render() {
     return (
       <div id="main">
-        <h3 className="main-header">Philippine News Aggregator</h3>
         <Switch>
           <Route path="/home" component={Home} />
           <Route path="/news" component={AllNews} />

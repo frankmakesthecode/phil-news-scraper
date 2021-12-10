@@ -26,7 +26,7 @@ export const SearchNews = (props) => {
         <input
           className="input-field"
           type="text"
-          placeholder="Search for headlines"
+          placeholder="Search Headlines"
           value={search}
           onChange={handleChange}
         />
