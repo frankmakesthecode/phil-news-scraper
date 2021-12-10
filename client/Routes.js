@@ -1,8 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { withRouter, Route, Switch, Redirect } from 'react-router-dom';
+
 import Home from './components/Home';
 import AllNews from './components/AllNews';
+import Rappler from './components/Rappler';
 
 /**
  * COMPONENT
@@ -15,6 +17,7 @@ class Routes extends Component {
         <Switch>
           <Route path="/home" component={Home} />
           <Route path="/news" component={AllNews} />
+          <Route path="/rappler" component={Rappler} />
           <Redirect to="/home" />
         </Switch>
       </div>

@@ -48,6 +48,19 @@ nav:hover .link-text {
   transition: 600ms;
 }
 
+.news-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 8rem;
+  margin-top: 5rem;
+  min-height: 75vh;
+  padding: 2rem 0;
+
+  border-radius: 16px;
+  background: var(--bg-primary);
+}
+
 .nav-link .react-icons {
   min-height: 2rem;
   min-width: 2rem;
@@ -238,19 +251,6 @@ nav:hover .link-text {
 #main {
   margin-left: 5rem;
   padding: 1rem;
-}
-
-#news-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 8rem;
-  margin-top: 5rem;
-  min-height: 75vh;
-  padding: 2rem 0;
-
-  border-radius: 16px;
-  background: var(--bg-primary);
 }
 
 #search-container {

@@ -17,7 +17,7 @@ const Navbar = () => {
           </a>
         </li>
         <li className="nav-item">
-          <a href="#" className="nav-link">
+          <a href="/rappler" className="nav-link">
             <img src={rapplerIcon} className="logo-icons" />
             <span className="link-text">Rappler</span>
           </a>

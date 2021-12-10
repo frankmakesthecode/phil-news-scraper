@@ -1,24 +1,26 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+
 import Loading from './widgets/loading';
 
-import { fetchNews } from '../store/news';
+import { fetchRappler } from '../store/rappler';
 
-export const AllNews = (props) => {
-  const { filteredNews, loadNews } = props;
+export const Rappler = (props) => {
+  const { rappler, loadRappler } = props;
 
   useEffect(() => {
-    loadNews();
+    loadRappler();
   }, []);
 
   return (
     <div>
       <div className="news-container">
-        {!filteredNews.length ? (
+        <h3 className="secondary-header">Rappler</h3>
+        {!rappler.length ? (
           <Loading />
         ) : (
           <div className="card-list">
-            {filteredNews.map((headline) => {
+            {rappler.map((headline) => {
               return (
                 <a
                   className="card"
@@ -26,7 +28,6 @@ export const AllNews = (props) => {
                   href={headline.link}
                   target="_blank"
                 >
-                  <h4 className="card-source">{headline.source}</h4>
                   <p className="card-title">{headline.title}</p>
                 </a>
               );
@@ -40,14 +41,14 @@ export const AllNews = (props) => {
 
 const mapState = (state) => {
   return {
-    filteredNews: state.filteredNews,
+    rappler: state.rappler,
   };
 };
 
 const mapDispatch = (dispatch) => {
   return {
-    loadNews: () => dispatch(fetchNews()),
+    loadRappler: () => dispatch(fetchRappler()),
   };
 };
 
-export default connect(mapState, mapDispatch)(AllNews);
+export default connect(mapState, mapDispatch)(Rappler);
